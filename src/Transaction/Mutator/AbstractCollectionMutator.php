@@ -7,7 +7,7 @@ namespace Barechain\Bitcoin\Transaction\Mutator;
 abstract class AbstractCollectionMutator implements \Iterator, \ArrayAccess, \Countable
 {
     /**
-     * @var \SplFixedArray
+     * @var \Iterator
      */
     protected $set;
 
