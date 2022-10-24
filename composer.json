@@ -1,0 +1,45 @@
+{
+  "name": "barechain/bitcoin",
+  "description": "Bitcoin library with functions for transactions, signatures, serialization, Random/Deterministic ECDSA keys, blocks, RPC bindings",
+  "type": "library",
+  "homepage": "https://github.com/barechain/bitcoin",
+  "license": "Unlicense",
+  "authors": [
+    {
+      "name": "inez4",
+      "email": "rremfi32@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Barechain\\Bitcoin\\": "src/"
+    },
+    "files": ["src/Script/functions.php"]
+  },
+  "require": {
+    "ext-bcmath": "*",
+    "ext-gmp": "*",
+    "php-64bit": ">=8.0",
+    "pleonasm/merkle-tree": "1.0.0",
+    "composer/semver": "^3.2.0",
+    "lastguest/murmurhash": "^2.1.0",
+    "mdanter/ecc": "^1.0",
+    "bitwasp/buffertools": "^0.5.0",
+    "bitwasp/bech32": "^0.0.1"
+  },
+  "suggest": {
+    "ext-secp256k1": "The secp256k1 library for fast and safe elliptic curve operations",
+    "ext-bitcoinconsensus": "The bitcoinconsensus library for safest possible script verification"
+  },
+  "require-dev": {
+    "ext-json": "*",
+    "nbobtc/bitcoind-php": "v2.0.2",
+    "bitwasp/secp256k1-php": "^v0.2.0",
+    "bitwasp/bitcoinconsensus": "v3.0.0"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  }
+}
